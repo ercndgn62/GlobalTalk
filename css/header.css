@@ -1,0 +1,160 @@
+.sabit {
+  position: sticky;
+  top: 0;
+  height: 88px;
+}
+
+.primary {
+  width: 131px;
+  height: 44px;
+  background-color: #c3dce3;
+  border: none;
+  color:#2b788B;
+  border-radius: 20px;
+}
+
+.secondary {
+  width: 131px;
+  height: 44px;
+  color: #ffffff;
+  border: none;
+  background-color: #2b788B;
+  border-radius: 20px;
+}
+
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 8vh;
+  background-color: #F6F5F4;
+  color: #757575;
+}
+
+.nav-logo{
+  font-family: 'Dela Gothic One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20.8609px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+}
+
+.nav-links a{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li:hover {
+  font-size: 16px;
+}
+
+.burger{
+  display: none;
+  cursor: pointer;
+}
+
+.burger .line1,
+.burger .line2,
+.burger .line3{
+  width: 24px;
+  height: 3px;
+  background-color: #757575;
+  transition: .3s ease;
+}
+.burger .line2{
+  margin: 3px 0px;
+}
+
+@media screen and (max-width: 768px){
+  body{
+    overflow-x: hidden;
+  }
+
+  .burger{
+    display: block;
+  }
+
+  .nav-links{
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 60%;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    background: #F6F5F4;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0;
+    transition: .5s ease;
+  }
+
+  .nav-links li{
+    opacity: 0;
+  }
+
+}
+
+
+
+.nav-active{
+  transform: translateX(0);
+  opacity: 100;
+}
+
+.close .line1{
+  transform: rotate(-45deg) translate(-5px,3px);
+  transition: .3s ease;
+}
+
+.close .line2{
+  opacity: 0;
+}
+
+.close .line3{
+  transform: rotate(45deg) translate(-5px,-3px);
+  transition: .3s ease;
+}
+
+
+
+
+@keyframes linksFade {
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.sec1 {
+  width: 100%;
+  background-color: #ffffff;
+  margin: 77px 0px;
+}
+
+
+.align-left {
+  text-align: left;
+}
